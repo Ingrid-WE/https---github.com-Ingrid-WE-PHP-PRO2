@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WebController;
 
 
 /*
@@ -25,12 +26,6 @@ Route::get('/cats', function () {
     return view('cats', ['name' => 'Musse', 'illness' => 'PTSD']);
 });
 
-Route::get('/cats', function () {
-    
-    return view('cats', ['name' => 'Musse', 'illness' => 'PTSD']);
-});
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/lamp', [WebController::class, 'lampor']);

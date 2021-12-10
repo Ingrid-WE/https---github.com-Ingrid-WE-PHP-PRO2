@@ -17,14 +17,14 @@ use App\Http\Controllers\Lamporcontroller;
 |
 */
 
-Route::get('/lampor', function(){
+/* Route::get('/lampor', function(){
     $lampor = lampor::create([
         'title'=>'my kukuku lampa', 
         'slug' =>'my first lampa slug'
     ]);
 
     return $lampor;
-});
+}); */
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

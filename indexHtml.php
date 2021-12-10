@@ -1,9 +1,44 @@
 <?php
 include 'includes/api.php';
+
+function CallAPI($method, $url, $data = false)
+{
+    $curl = curl_init();
+
+    switch ($method)
+    {
+        case "POST":
+            curl_setopt($curl, CURLOPT_POST, 1);
+
+            if ($data)
+                curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+            break;
+        case "PUT":
+            curl_setopt($curl, CURLOPT_PUT, 1);
+            break;
+        default:
+            if ($data)
+                $url = sprintf("%s?%s", $url, http_build_query($data));
+    }
+
+    // Optional Authentication:
+    curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    curl_setopt($curl, CURLOPT_USERPWD, "username:password");
+
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    $result = curl_exec($curl);
+
+    curl_close($curl);
+
+    return $result;
+}
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +55,7 @@ include 'includes/api.php';
     <div class="card" style="width: 18rem;">
         <img src="lampa1.jpeg" class="card-img-top" alt="...">
         <div id="lampasInfo" class="card-body">
-          <p class="card-text" >{route{{$data=>content}}}</p>
+          <p class="card-text" ><?php {{$data -> name;}}?></p>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -38,3 +73,5 @@ include 'includes/api.php';
     </main>
 </body>
 </html>
+
+
