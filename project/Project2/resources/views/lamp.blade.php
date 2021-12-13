@@ -15,12 +15,13 @@
     <div class="card" style="width: 18rem;">
         <img src="lampa1.jpeg" class="card-img-top" alt="...">
         <div id="lampasInfo" class="card-body">
+            <h1></h1>
         @foreach ($lampor as $lampa)
-        <p class="card-text" > {{$lampa->course}} </p>
+        <p class="card-text" > {{$lampa->content}} </p>
         @endforeach
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
+      <!-- <div class="card" style="width: 18rem;">
         <img src="lampa2.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text"></p>
@@ -29,7 +30,7 @@
       <div class="card" style="width: 18rem;">
         <img src="lampa3.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text"></p>
+          <p class="card-text"></p> -->
         </div>
       </div>
     </main>
