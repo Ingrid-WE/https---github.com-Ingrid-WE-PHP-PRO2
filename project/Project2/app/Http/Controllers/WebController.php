@@ -22,9 +22,9 @@ class WebController extends Controller
         return view('bordslampa', ["bordslampa" => $bordslampa]);
     }
 
-    function tacklampa(){
-        $tacklampa = Lampor::where('id',[3]) -> get();
-        return view('tacklampa', ["tacklampa" => $tacklampa]);
+    function taklampa(){
+        $taklampa = Lampor::where('id',[3]) -> get();
+        return view('taklampa', ["taklampa" => $taklampa]);
     }
     
     function golvlampa(){

@@ -24,7 +24,9 @@
             <a href="golvlampa.html"><img src="golvlampabild.jpeg"></a>
         </div>
         @foreach ($golvlampa as $lampa)
-        <h1 class="lamptext">{{$lampa->content}} </h1>
+        <h1 class="lamptext">Namn: {{$lampa->name}}</h1>
+        <p class="lamptext">Beskrivning: {{$lampa->content}}</p>
+        <p class="lamptext">Pris: {{$lampa->price}}</p>
         @endforeach
     </div>
 </body>
