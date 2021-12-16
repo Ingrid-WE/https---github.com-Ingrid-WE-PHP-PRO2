@@ -7,10 +7,6 @@ use App\Models\Lampor;
 
 class WebController extends Controller
 {
-    function lampor(){
-        $lampor = Lampor::where('id',[1]) -> get();
-        return view('lamp', ["lampor" => $lampor]);
-    }
 
     function index(){
         $index = Lampor::get();

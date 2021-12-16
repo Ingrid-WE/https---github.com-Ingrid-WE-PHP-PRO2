@@ -14,15 +14,7 @@ class CreateLamporsTable extends Migration
     public function up()
     {
       
-        Schema::create('ljus', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->string('content')->nullable();
-            $table->timestamps();
-        });
-
-        Schema::create('lamporna', function (Blueprint $table) {
+        Schema::create('lampors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('course');

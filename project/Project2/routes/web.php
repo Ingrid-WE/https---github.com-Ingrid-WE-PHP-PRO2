@@ -21,13 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cats', function () {
-    
-    return view('cats', ['name' => 'Musse', 'illness' => 'PTSD']);
-});
-
-
-
 Route::get('/lamp', [WebController::class, 'lampor']);
 
 Route::get('/index', [WebController::class, 'index']);
