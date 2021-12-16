@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class CreateLamporsTable extends Migration
 {
     /**
@@ -15,7 +16,7 @@ class CreateLamporsTable extends Migration
     {
       
         Schema::create('lampors', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
             $table->string('name');
             $table->string('price');
             $table->string('content')->nullable();

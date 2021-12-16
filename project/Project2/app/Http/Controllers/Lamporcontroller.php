@@ -22,23 +22,23 @@ class Lamporcontroller extends Controller
         $lampor->save();
 
         return response()->json(
-            ["message"=> "student record created"],
+            ["message"=> "lampa record created"],
             201
         );
     }
 
     public function getLampor($id){
         if(lampor::where('id', $id)->exists()){
-            $lampor = lampor::where('lampors, $id')->get()->json(JSON_PRETTY_PRINT);
-            return response($lampor, 200);
+            $lampors = lampor::where('id', $id)->get()->toJson(JSON_PRETTY_PRINT);
+            return response($lampors, 200);
         } else {
-            return response()->json([
-                "message" => "Lampor not found"
+            return response()->json(
+                ["message" => "Lampor not found"
             ], 400);
             }
         }
 
-  
+        
 
     
     public function updateLampor(Request $request, $id)
