@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\lampor;
+use App\Models\Lampor;
 use App\Http\Controllers\Lamporcontroller;
 
 

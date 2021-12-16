@@ -44,10 +44,11 @@ class Lamporcontroller extends Controller
     public function updateLampor(Request $request, $id)
     {
         if(Lampor::where('id', $id)->exists()) {
-            $lampor = Lampor::find($id);
-            $lampor->name = is_null($request->name) ? $lampor->name : $request->name;
-            $lampor->price = is_null($request->price) ? $lampor->price : $lampor->price;
-            $lampor->save();
+           
+            $lampors = Lampor::find($id); 
+            $lampors->name = is_null($request->name) ? $lampors->name : $request->name;
+            $lampors->price = is_null($request->price) ? $lampors->price : $request->price;
+            $lampors->save();
 
             return response()->json([
                 "message" => "records updated succesfully"

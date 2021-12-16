@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lampor extends Model
 {
-    
     protected $primaryKey = 'id';
     protected $table = 'lampors';
     protected $fillable = [

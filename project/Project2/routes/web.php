@@ -21,8 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/lamp', [WebController::class, 'lampor']);
-
 Route::get('/index', [WebController::class, 'index']);
 Route::get('/bordslampa', [WebController::class, 'bordslampa']);
 Route::get('/taklampa', [WebController::class, 'taklampa']);
