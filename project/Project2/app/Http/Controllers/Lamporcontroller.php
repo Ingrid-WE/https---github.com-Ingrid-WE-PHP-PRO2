@@ -29,7 +29,7 @@ class Lamporcontroller extends Controller
 
     public function getLampor($id){
         if(lampor::where('id', $id)->exists()){
-            $lampor = lampor::where('id, $id')->get()->json(JSON_PRETTY_PRINT);
+            $lampor = lampor::where('lampors, $id')->get()->json(JSON_PRETTY_PRINT);
             return response($lampor, 200);
         } else {
             return response()->json([
@@ -37,6 +37,8 @@ class Lamporcontroller extends Controller
             ], 400);
             }
         }
+
+  
 
     
     public function updateLampor(Request $request, $id)

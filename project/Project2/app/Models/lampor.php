@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Lampor extends Model
 {
     
-
-    public $table = 'lampors';
-    public $fillable = [
+    
+    protected $table = 'lampors';
+    protected $fillable = [
         'id',
         'name',
         'price',
