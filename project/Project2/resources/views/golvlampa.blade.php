@@ -21,7 +21,7 @@
         </header>
 
         <div class="golvbild">
-            <a href="golvlampa.html"><img src="golvlampabild.jpeg"></a>
+            <a href="/golvlampa"><img src="golvlampabild.jpeg"></a>
         </div>
         @foreach ($golvlampa as $lampa)
         <h1 class="lamptext">Namn: {{$lampa->name}}</h1>
