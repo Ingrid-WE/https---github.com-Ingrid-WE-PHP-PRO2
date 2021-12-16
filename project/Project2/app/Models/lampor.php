@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class lampor extends Model
+class Lampor extends Model
 {
     
 
-    protected $table = 'lampors';
-    protected $fillable = [
+    public $table = 'lampors';
+    public $fillable = [
+        'id',
         'name',
-        'course',
+        'price',
         'content'
     ];
 }

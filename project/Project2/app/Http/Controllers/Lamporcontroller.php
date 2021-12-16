@@ -18,7 +18,7 @@ class Lamporcontroller extends Controller
     public function createLampor(Request $request){
         $lampor = new Lampor;
         $lampor->name= $request->name;
-        $lampor->course = $request->course;
+        $lampor->price = $request->price;
         $lampor->save();
 
         return response()->json(
@@ -44,7 +44,7 @@ class Lamporcontroller extends Controller
         if(Lampor::where('id', $id)->exists()) {
             $lampor = Lampor::find($id);
             $lampor->name = is_null($request->name) ? $lampor->name : $request->name;
-            $lampor->course = is_null($request->course) ? $lampor->course : $lampor->course;
+            $lampor->price = is_null($request->price) ? $lampor->price : $lampor->price;
             $lampor->save();
 
             return response()->json([

@@ -17,7 +17,7 @@ class CreateLamporsTable extends Migration
         Schema::create('lampors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('course');
+            $table->string('price');
             $table->string('content')->nullable();
             $table->timestamps();
         });
